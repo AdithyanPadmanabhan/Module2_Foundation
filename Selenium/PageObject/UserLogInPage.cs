@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace Selenium_Project.PageObject
 {
-    internal class UserLogIn
+    internal class UserLogInPage
     {
 
         IWebDriver driver;
-        public UserLogIn(IWebDriver? driver)
+        public UserLogInPage(IWebDriver? driver)
         {
             this.driver = driver ?? throw new ArgumentException(nameof(driver));
 

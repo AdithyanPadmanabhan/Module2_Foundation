@@ -38,7 +38,7 @@ namespace Selenium_Project.TestScripts
                .WriteTo.File(filePath, rollingInterval: RollingInterval.Day).CreateLogger();
 
 
-            UserLogIn userlogin = new(driver);
+            UserLogInPage userlogin = new(driver);
             string? excelFilePath = currDir + "/TestData/Input_Data.xlsx";
             string? sheetName = "PracticePage";
 
@@ -89,10 +89,13 @@ namespace Selenium_Project.TestScripts
 
                     LogTestResult("Course Selection and Enroll",
                       "Course Selection and Enroll", ex.Message);
+                    test = extent.CreateTest("Course Selection and Enroll Test- Fail");
+                   
                 }
+                Log.CloseAndFlush();
 
-              
-                
+
+
 
 
             }

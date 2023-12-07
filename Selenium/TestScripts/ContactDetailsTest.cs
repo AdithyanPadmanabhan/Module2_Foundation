@@ -36,7 +36,7 @@ namespace Selenium_Project.TestScripts
 
             try
             {
-                UserLogIn userlogin = new(driver);
+                UserLogInPage userlogin = new(driver);
                 var contacttab = userlogin.UserLoginFunction(username, password);
                 var contactdetail =fluentWait.Until(d=> contacttab.ContactTabFunction());
                 contactdetail.ContactDetailsFunction(firstname, lastname, email, comment);
@@ -54,7 +54,7 @@ namespace Selenium_Project.TestScripts
                test.Fail("Contact Details   failed");
             }
 
-
+            Log.CloseAndFlush();
         }
     }
 }

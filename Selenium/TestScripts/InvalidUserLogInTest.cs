@@ -34,7 +34,7 @@ namespace Selenium_Project.TestScripts
                .WriteTo.File(filePath, rollingInterval: RollingInterval.Day).CreateLogger();
 
 
-            UserLogIn userlogin = new(driver);
+            UserLogInPage userlogin = new(driver);
             userlogin.UserLoginFunction(username, password);
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
             IWebElement message = wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//div[@class='show']")));
@@ -55,7 +55,7 @@ namespace Selenium_Project.TestScripts
 
                 LogTestResult("User Invalid Test",
                   "User Invalid Test", ex.Message);
-
+                test = extent.CreateTest("User Invalid Test - fail");
 
             }
         }

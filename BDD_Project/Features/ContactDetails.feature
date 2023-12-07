@@ -4,10 +4,10 @@ A short summary of the feature
 
 @tag1
 Scenario: Contact_Details
- Given User will be on Login  page
-	When user will enter  username '<Username>'
-	And user will enter  password '<Password>'
-	And user will click  on submit button
+ Given User will be on Login   page
+	When user will enter  username  '<Username>'
+	And user will enter  password  '<Password>'
+	And user will click  on submit  button
 	Then user will be  redirected to Homepage
 	When User will click on contact tab
 	Then user will be on contact details page

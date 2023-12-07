@@ -12,14 +12,17 @@ namespace BDD_Project.StepDefinitions
     internal class ContactDetailsSteps :CoreCodes
     {
         IWebDriver? driver = AllHooks.driver;
-        [Given(@"User will be on Login  page")]
+
+     
+        [Given(@"User will be on Login   page")]
         public void GivenUserWillBeOnLoginPage()
         {
             driver.Url = "https://practicetestautomation.com/practice-test-login/";
             driver.Manage().Window.Maximize();
         }
 
-        [When(@"user will enter  username '([^']*)'")]
+
+        [When(@"user will enter  username  '([^']*)'")]
         public void WhenUserWillEnterUsername(string username)
         {
             var fluentWait = Waits(driver);
@@ -27,7 +30,7 @@ namespace BDD_Project.StepDefinitions
             usernameInput?.SendKeys(username);
         }
 
-        [When(@"user will enter  password '([^']*)'")]
+        [When(@"user will enter  password  '([^']*)'")]
         public void WhenUserWillEnterPassword(string password)
         {
             var fluentWait = Waits(driver);
@@ -35,7 +38,8 @@ namespace BDD_Project.StepDefinitions
             passwordInput?.SendKeys(password);
         }
 
-        [When(@"user will click  on submit button")]
+
+        [When(@"user will click  on submit  button")]
         public void WhenUserWillClickOnSubmitButton()
         {
             var fluentWait = Waits(driver);
